@@ -10,6 +10,13 @@
 #define __CAS(ptr,oldval,newval) __sync_val_compare_and_swap(ptr,oldval,newval)
 #endif
 
+/* Required by some BSDs */
+#ifndef  MAP_ANONYMOUS
+#ifdef MAP_ANON
+#define MAP_ANONYMOUS MAP_ANON
+#endif
+#endif
+
 static iarray_page* new_page(size_t pagesize) {
 #ifdef __MINGW32__
   void* x=malloc(pagesize);

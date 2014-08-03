@@ -28,6 +28,15 @@ string:
   return fmt_str(dest,s);
 }
 
+
+#   if defined __GNUC__ && __GNUC__ > 3 && !defined __APPLE__
+#       define LOWFAT_ALIAS(x) __attribute__ ((weak, alias(#x)))
+#   else
+#       define LOWFAT_ALIAS(x)
+#   endif
+
 #ifdef __GNUC__
-size_t fmt_escapecharhtml(char* dest,uint32_t ch) __attribute__((__alias__("fmt_escapecharxml")));
+//# if !defined __APPLE__ && defined __GNUC__ && __GNUC__ > 3
+//size_t fmt_escapecharhtml(char* dest,uint32_t ch) __attribute__((__alias__("fmt_escapecharxml")));
 #endif
+size_t fmt_escapecharhtml(char* dest,uint32_t ch) LOWFAT_ALIAS(fmt_escapecharxml);
