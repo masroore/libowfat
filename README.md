@@ -1,8 +1,9 @@
 libowfat
 ========
 
-*This is the git clone of [libowfat](http://www.fefe.de/libowfat/) (cvs.fefe.de) repository*
-*This version of libowfat contains patches for OS X clang compiler*
+*This is a git clone of the [libowfat](http://www.fefe.de/libowfat/) CVS repository (cvs.fefe.de)*
+
+**Contains patches for building with clang on Mac OS X**
 
 [**libowfat**](http://www.fefe.de/libowfat/) is a library of general purpose APIs extracted from Dan
 Bernstein's [libdjb](http://www.fefe.de/djb/) software, reimplemented and covered by the GNU General Public License Version 2 (no later versions).
