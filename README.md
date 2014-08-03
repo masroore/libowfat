@@ -5,6 +5,12 @@ libowfat
 
 **Contains patches for building with clang on Mac OS X**
 
+### Build Instructions
+
+    git clone git@github.com:masroore/libowfat.git
+    cd libowfat
+    make    
+
 [**libowfat**](http://www.fefe.de/libowfat/) is a library of general purpose APIs extracted from Dan
 Bernstein's [libdjb](http://www.fefe.de/djb/) software, reimplemented and covered by the GNU General Public License Version 2 (no later versions).
 
